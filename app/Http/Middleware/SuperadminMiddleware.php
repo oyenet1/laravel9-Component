@@ -16,6 +16,7 @@ class SuperadminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        abort_unless(isSuperAdmin(), 403, 'You have to right to view the pages or perform the action');
         return $next($request);
     }
 }
