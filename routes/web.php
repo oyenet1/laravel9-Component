@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/test', 'layouts.dashboard');
+Route::view('/layout1', 'layouts.dashboard');
 
 Route::middleware([
     'auth:sanctum',
